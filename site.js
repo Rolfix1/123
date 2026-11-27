@@ -46,6 +46,8 @@ function updateSelectedRate() {
   selectedRate.textContent = rate ? serviceSelect.value + ' · ' + rate.toLowerCase() : '';
 }
 serviceSelect.addEventListener('change', updateSelectedRate);
+window.addEventListener('pageshow', updateSelectedRate);
+updateSelectedRate();
 document.querySelectorAll('[data-service]').forEach(link => {
   link.addEventListener('click', () => {
     serviceSelect.value = link.dataset.service;
