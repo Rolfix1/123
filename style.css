@@ -1183,7 +1183,7 @@ body, h1, h2, h3, #reviews h2, .booking h2, .facts strong { font-family: VectorI
 .job-photo { display:block; position:relative; overflow:hidden; border-radius:6px }
 .job-photo img { display:block; transition:transform .35s ease }
 .job-toggle { position:absolute; bottom:12px; right:12px; display:grid; place-items:center; width:36px; height:36px; border-radius:50%; background:#ae2029; color:white }
-.job-toggle::before { content:'→'; font:24px/1 Arial }
+.job-toggle { font:24px/1 Arial,sans-serif }
 .job-title { display:block; margin:14px 0 6px; font-size:clamp(21px,2.3vw,32px); line-height:1.15; font-weight:700 }
 .jobs .job-case {display:block;text-decoration:none;color:inherit}
 @media(hover:hover) and (prefers-reduced-motion:no-preference){.job-case:hover img{transform:scale(1.035)}}
