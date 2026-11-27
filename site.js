@@ -37,9 +37,19 @@ choices.forEach(choice => choice.addEventListener('click', () => {
   symptomBook.textContent = 'Проверка от ' + price + ' ₽ ↗';
 }));
 
+const serviceSelect = document.querySelector('#service');
+const selectedRate = document.querySelector('#selected-rate');
+function updateSelectedRate() {
+  const card = Array.from(document.querySelectorAll('.repair-card')).find(item => item.dataset.service === serviceSelect.value);
+  const rate = card?.querySelector('.service-rate')?.textContent;
+  selectedRate.hidden = !rate;
+  selectedRate.textContent = rate ? serviceSelect.value + ' · ' + rate.toLowerCase() : '';
+}
+serviceSelect.addEventListener('change', updateSelectedRate);
 document.querySelectorAll('[data-service]').forEach(link => {
   link.addEventListener('click', () => {
-    document.querySelector('#service').value = link.dataset.service;
+    serviceSelect.value = link.dataset.service;
+    updateSelectedRate();
   });
 });
 
@@ -66,6 +76,7 @@ form.addEventListener('submit', async event => {
       return;
     }
     form.reset();
+    updateSelectedRate();
     result.textContent = 'Заявка сохранена. Номер ' + data.id.slice(0, 8).toUpperCase() + '.';
   } catch {
     result.textContent = 'Не удалось связаться с сервером. Попробуйте ещё раз.';
@@ -73,15 +84,6 @@ form.addEventListener('submit', async event => {
     button.disabled = false;
   }
 });
-
-const contactDialog = document.querySelector('#demo-contact');
-document.querySelectorAll('[data-channel]').forEach(control => {
-  control.addEventListener('click', () => {
-    contactDialog.querySelector('h3').textContent = control.dataset.channel + ' · демо-контакт';
-    contactDialog.showModal();
-  });
-});
-contactDialog.querySelector('a').addEventListener('click', () => contactDialog.close());
 
 const track = document.querySelector('.reviews');
 const [previous, next] = document.querySelectorAll('.review-controls button');

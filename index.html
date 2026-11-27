@@ -55,7 +55,7 @@
 </section>
 <section id="services" class="section light"><div class="wrap">
 <div class="intro"><h2>Ремонт и обслуживание</h2><p>Цены ориентировочные. Запчасти и расходники оплачиваются отдельно. Итоговую сумму согласуем до начала работ.</p></div>
-<div class="symptoms"><h3>Что случилось с машиной?</h3>
+<div class="symptoms" id="symptoms"><h3>Что случилось с машиной?</h3>
 <div class="symptom-buttons" aria-label="Выберите симптом"><button type="button" data-symptom="stall" aria-pressed="true">Глохнет</button><button type="button" data-symptom="knock" aria-pressed="false">Стучит</button><button type="button" data-symptom="battery" aria-pressed="false">Садится аккумулятор</button></div>
 <div class="symptom-answer" aria-live="polite"><p id="likely">Возможны перебои зажигания или подачи топлива. Проверим двигатель и показания датчиков.</p><a id="symptom-book" href="#booking" data-service="Двигатель">Проверка от 2 500 ₽ ↗</a></div></div>
 <div class="repair-grid">
@@ -65,13 +65,13 @@
       <span><strong>Двигатель</strong><small>Диагностика и ремонт при потере тяги, расходе масла или ошибке Check Engine.</small><span class="service-rate">Проверка от 2 500 ₽ · 45–60 мин</span></span><i aria-hidden="true">↗</i>
     </a>
     <a class="repair-card" href="#booking" data-service="Ремонт АКПП">
-      <span><strong>Ремонт АКПП</strong><small>Проверяем коробку при пробуксовке и рывках на переключениях.</small><span class="service-rate">Работа от 18 000 ₽</span></span><i aria-hidden="true">↗</i>
+      <span><strong>Ремонт АКПП</strong><small>Проверяем коробку при пробуксовке и рывках на переключениях.</small><span class="service-rate">Работа от 18 000 ₽ · срок после диагностики</span></span><i aria-hidden="true">↗</i>
     </a>
     <a class="repair-card" href="#booking" data-service="Ремонт DSG">
-      <span><strong>Ремонт DSG</strong><small>Проверяем сцепление и мехатроник при толчках и ошибках коробки.</small><span class="service-rate">Работа от 16 000 ₽</span></span><i aria-hidden="true">↗</i>
+      <span><strong>Ремонт DSG</strong><small>Проверяем сцепление и мехатроник при толчках и ошибках коробки.</small><span class="service-rate">Работа от 16 000 ₽ · срок после диагностики</span></span><i aria-hidden="true">↗</i>
     </a>
     <a class="repair-card" href="#booking" data-service="Раскоксовка двигателя">
-      <span><strong>Раскоксовка двигателя</strong><small>Оцениваем состояние двигателя и решаем, подходит ли процедура.</small><span class="service-rate">От 5 500 ₽</span></span><i aria-hidden="true">↗</i>
+      <span><strong>Раскоксовка двигателя</strong><small>Оцениваем состояние двигателя и решаем, подходит ли процедура.</small><span class="service-rate">От 5 500 ₽ · ориентировочно 2–4 часа</span></span><i aria-hidden="true">↗</i>
     </a>
   </section>
   <section class="repair-group">
@@ -86,20 +86,20 @@
   <section class="repair-group">
     <h3>Обслуживание</h3>
     <a class="repair-card" href="#booking" data-service="Техническое обслуживание">
-      <span><strong>Техническое обслуживание</strong><small>Меняем масло, фильтры и жидкости по регламенту автомобиля.</small><span class="service-rate">Работа от 3 500 ₽</span></span><i aria-hidden="true">↗</i>
+      <span><strong>Техническое обслуживание</strong><small>Меняем масло, фильтры и жидкости по регламенту автомобиля.</small><span class="service-rate">Работа от 3 500 ₽ · ориентировочно 1–3 часа</span></span><i aria-hidden="true">↗</i>
     </a>
     <a class="repair-card" href="#booking" data-service="Диагностика автомобиля">
-      <span><strong>Диагностика автомобиля</strong><small>Проверяем автомобиль по симптомам или перед покупкой.</small><span class="service-rate">От 3 000 ₽</span></span><i aria-hidden="true">↗</i>
+      <span><strong>Диагностика автомобиля</strong><small>Проверяем автомобиль по симптомам или перед покупкой.</small><span class="service-rate">От 3 000 ₽ · ориентировочно 1–2 часа</span></span><i aria-hidden="true">↗</i>
     </a>
     <a class="repair-card" href="#booking" data-service="Мойка автомобиля">
-      <span><strong>Мойка автомобиля</strong><small>Моем кузов, стёкла и колёсные диски.</small><span class="service-rate">От 1 200 ₽</span></span><i aria-hidden="true">↗</i>
+      <span><strong>Мойка автомобиля</strong><small>Моем кузов, стёкла и колёсные диски.</small><span class="service-rate">От 1 200 ₽ · ориентировочно 30–60 мин</span></span><i aria-hidden="true">↗</i>
     </a>
   </section>
 </div>
 </div></section>
 <section id="work" class="section work"><div class="wrap">
 <div class="intro"><h2>Работы в боксе</h2><p>Учебные примеры ремонта. Суммы и истории приведены для демонстрации.</p></div>
-<div class="jobs"><article><img src="./lift.webp" alt="Рабочий процесс в автосервисе" width="320" height="205" loading="lazy"><h3>Стук на неровностях</h3><p>Люфт стоек стабилизатора. Заменили обе стойки и проверили подвеску.</p><strong>8 400 ₽</strong></article><article><img src="./engine.webp" alt="Рабочий процесс в автосервисе" width="320" height="205" loading="lazy"><h3>Двигатель глохнет</h3><p>При прогреве пропадал сигнал датчика коленвала. Заменили датчик и проверили запуск.</p><strong>6 900 ₽</strong></article><article><img src="./wheels.webp" alt="Рабочий процесс в автосервисе" width="320" height="205" loading="lazy"><h3>Вибрация при торможении</h3><p>Обнаружили биение передних дисков. Установили диски и колодки.</p><strong>21 500 ₽</strong></article></div>
+<div class="jobs"><article><img src="./lift.webp" alt="Пример: автомобиль на подъёмнике" width="320" height="205" loading="lazy"><h3>Стук на неровностях</h3><p>На подъёмнике проверили соединения монтажкой и обнаружили люфт стоек стабилизатора. Заменили обе стойки и повторно проверили подвеску.</p><strong>8 400 ₽</strong></article><article><img src="./engine.webp" alt="Рабочий процесс в автосервисе" width="320" height="205" loading="lazy"><h3>Двигатель глохнет</h3><p>При прогреве пропадал сигнал датчика коленвала. Заменили датчик и проверили запуск.</p><strong>6 900 ₽</strong></article><article><img src="./wheels.webp" alt="Рабочий процесс в автосервисе" width="320" height="205" loading="lazy"><h3>Вибрация при торможении</h3><p>Обнаружили биение передних дисков. Установили диски и колодки.</p><strong>21 500 ₽</strong></article></div>
 <div class="intro"><h3>До и после мойки</h3><p>Передвиньте ползунок, чтобы увидеть кузов до и после мойки. Иллюстрация для портфолио.</p></div>
 <div class="compare" id="compare"><div class="after"></div><div class="before"></div><div class="compare-line" aria-hidden="true"><span>↔</span></div><span class="tag tag-before">До</span><span class="tag tag-after">После</span><input aria-label="Граница сравнения до и после" id="comparison" type="range" min="0" max="100" value="50"></div>
 </div></section>
@@ -142,13 +142,13 @@
 <label>Телефон<input name="phone" type="tel" autocomplete="tel" required maxlength="28" placeholder="+7 ___ ___ __ __"></label>
 <label>Автомобиль<input name="car" required maxlength="100" placeholder="Марка, модель и год"></label>
 <label>Услуга<select name="service" id="service"><option>Нужна помощь с выбором</option><option>Двигатель</option><option>Электрика</option><option>Ходовая и тормоза</option><option>Ремонт двигателей</option><option>Ремонт подвески</option><option>Техническое обслуживание</option><option>Ремонт тормозной системы</option><option>Автоэлектрика и оборудование</option><option>Ремонт АКПП</option><option>Ремонт DSG</option><option>Диагностика автомобиля</option><option>Раскоксовка двигателя</option><option>Мойка автомобиля</option></select></label>
+<p id="selected-rate" class="selected-rate" aria-live="polite" hidden></p>
 <label>Что беспокоит <small>необязательно</small><textarea name="message" rows="3" maxlength="600" placeholder="Когда проявляется проблема?"></textarea></label>
 <label class="consent"><input type="checkbox" name="consent" value="yes" required> <span>Согласен на обработку данных для ответа на заявку. <a href="#privacy">Политика конфиденциальности</a></span></label>
 <button class="button" type="submit" disabled>Проверить форму <span aria-hidden="true">↗</span></button><p id="result" role="status"></p>
 </form></div></section>
 <section id="contacts" class="section contacts"><div class="wrap"><div class="intro"><h2>Как добраться</h2><p>Контакты демонстрационного техцентра. Москва, район Сокол.</p></div><div class="contact-grid"><img src="./garage.webp" width="272" height="182" loading="lazy" alt="Автомобили в сервисном боксе"><div><h3>Москва · Сокол</h3><p>Демо-адрес: Учебный проезд, 7 · ориентир — метро «Сокол»<br>Ежедневно, 09:00–20:00</p><p>Демо-телефон: +7 (495) XXX-XX-XX<br>Telegram: тестовый контакт</p><a class="outline" href="https://yandex.ru/maps/?text=метро%20Сокол%20Москва" target="_blank" rel="noopener">Район на карте ↗</a></div></div><details class="area-map"><summary>Показать карту района</summary><iframe loading="lazy" title="Карта района метро Сокол, Москва" src="https://yandex.ru/map-widget/v1/?ll=37.5152%2C55.8051&amp;z=15"></iframe></details></div></section>
 <section id="privacy" class="legal wrap"><h2>Конфиденциальность и реквизиты</h2><p>«ВЕКТОР» — вымышленный техцентр. Название, график, цены и отзывы демонстрационные. Учебное наименование — ООО «Вектор Демо». Юридическое лицо, ИНН, ОГРН и подтверждённый рейтинг отсутствуют.</p><p id="data-policy">Поля формы обрабатываются только в браузере. Сайт не отправляет и не сохраняет введённые данные. При открытии карты вы переходите в сервис Яндекса.</p></section>
-<nav class="contact-dock" aria-label="Быстрые действия"><button type="button" data-channel="Телефон">Позвонить</button><button type="button" data-channel="Telegram">Написать в Telegram</button></nav>
-<dialog id="demo-contact"><h3></h3><p>Это портфолио вымышленного техцентра. Можно посмотреть, как проходит запись, заполнив тестовую форму.</p><form method="dialog"><button>Закрыть</button></form><a href="#booking">Перейти к форме ↗</a></dialog></main>
+<nav class="contact-dock" aria-label="Быстрые действия"><a href="#symptoms">Подобрать проверку</a><a href="#booking">Пример записи ↗</a></nav></main>
 <footer class="wrap footer"><a class="logo" href="#" aria-label="Вектор, начало страницы"><i aria-hidden="true"></i>ВЕКТОР</a><span>Концепт вымышленного техцентра · фото Unsplash</span><a href="#privacy">Политика и реквизиты</a></footer>
 </body></html>
