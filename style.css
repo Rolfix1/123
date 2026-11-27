@@ -186,7 +186,7 @@ h1,h2,h3,p,figure,blockquote {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background-image: linear-gradient(90deg,#15131cee 0%,#17141bcc 24%,#16131b38 64%,#12101720 100%),linear-gradient(0deg,#151419 0%,#15141900 27%,#15141900 70%,#15141985 100%),url("/hero.jpg");
+  background-image: linear-gradient(90deg,#15131cee 0%,#17141bcc 24%,#16131b38 64%,#12101720 100%),linear-gradient(0deg,#151419 0%,#15141900 27%,#15141900 70%,#15141985 100%),url("./hero.webp");
   background-position: center,center,center 55%;
   background-size: cover;
   animation: open-photo 1.35s cubic-bezier(.22,1,.36,1) both;
@@ -451,7 +451,7 @@ h3 {
 .before,.after {
   position: absolute;
   inset: 0;
-  background: url("/work.jpg") center 53%/cover;
+  background: url("./work.webp") center 53%/cover;
 }
 
 .before {
@@ -771,7 +771,7 @@ textarea {
   }
   .hero-photo {
     background-position: center,center,57% center;
-    background-image: linear-gradient(90deg,#15131ccc,#17141b66),linear-gradient(0deg,#151419 0%,#15141900 36%,#15141966 100%),url("/hero.jpg");
+    background-image: linear-gradient(90deg,#15131ccc,#17141b66),linear-gradient(0deg,#151419 0%,#15141900 36%,#15141966 100%),url("./hero.webp");
   }
   .hero h1 {
     font-size: clamp(58px,14.7vw,96px);
@@ -892,7 +892,7 @@ h2, .booking h2, h3, .facts strong {
   .services article:hover::before { transform: scaleX(1); }
   .services article:hover a { background: var(--accent); transform: translate(2px,-2px); }
 }
-.before, .after { background: url("/hero.jpg") center center / cover; filter: none; }
+.before, .after { background: url("./hero.webp") center center / cover; filter: none; }
 .before canvas { width: 100%; height: 100%; object-fit: cover; }
 .reviews { display: block; }
 .reviews figure { padding: 30px 0; border: 0; max-width: 820px; }
@@ -911,7 +911,7 @@ h2, .booking h2, h3, .facts strong {
   aspect-ratio: 1564 / 778;
 }
 .compare .before, .compare .after {
-  background-image: url("/work.jpg");
+  background-image: url("./work.webp");
   background-size: 100% 201.03%;
   background-position: center top;
 }
@@ -981,7 +981,7 @@ body, .light, .work, .booking { background: #131314; color: #fafafa; }
 .hero-content .button:hover { background: #a61e23; }
 .hero-photo {
   background-image: linear-gradient(90deg,#121111ed 0%,#161414c4 26%,#16141424 67%,#11111112 100%),
-    linear-gradient(0deg,#131314 0%,transparent 32%,transparent 70%,#15141473 100%), url("/hero.jpg");
+    linear-gradient(0deg,#131314 0%,transparent 32%,transparent 70%,#15141473 100%), url("./hero.webp");
 }
 .hero-content { max-width: 100%; }
 
@@ -1142,7 +1142,7 @@ main .section .intro {
 @media (max-width: 660px) {
   .hero-photo {
     background-image: linear-gradient(90deg,#141313ca,#1413135c),
-      linear-gradient(0deg,#131314 0%,transparent 38%,#14131366 100%), url("/hero.jpg");
+      linear-gradient(0deg,#131314 0%,transparent 38%,#14131366 100%), url("./hero.webp");
   }
 }
 @media (max-width: 660px) {
@@ -1153,5 +1153,31 @@ main .section .intro {
   .visit-steps { grid-template-columns: 1fr; gap: 18px; }
   .visit-steps p { max-width: none; }
 }
+@font-face { font-family: VectorInter; src: url("./inter-lat.woff2") format("woff2"); font-weight:100 900; font-display:swap; }
+@font-face { font-family: VectorInter; src: url("./inter-cyr.woff2") format("woff2"); font-weight:100 900; font-display:swap; unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116; }
+body, h1, h2, h3, #reviews h2, .booking h2, .facts strong { font-family: VectorInter,Arial,sans-serif; }
+#reviews h2 { text-transform:none; font-weight:650; }
+.jobs,.contact-grid {display:grid;gap:24px;grid-template-columns:repeat(3,minmax(0,1fr));margin-bottom:48px}
+.jobs img,.contact-grid img {width:100%;height:auto;aspect-ratio:1.55;object-fit:cover;border-radius:6px}
+.jobs h3,.contact-grid h3,.symptoms h3 {font-size:clamp(21px,2.3vw,32px);margin:14px 0}
+.jobs p,.legal p,.contact-grid p,.symptoms p {line-height:1.55;margin:10px 0;color:#d4d0d0}
+.contact-grid {grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center}
+.symptoms {padding:clamp(18px,3vw,36px);background:#252122;border-radius:10px;margin-bottom:32px}
+.symptom-buttons {display:flex;flex-wrap:wrap;gap:8px}
+.symptom-buttons button {background:#181718;border:1px solid #61595b;color:white;border-radius:5px;padding:10px 14px;min-height:44px}
+.symptom-buttons button[aria-pressed=true] {background:#ac222a;border-color:#cd4348}
+.symptom-answer a,.consent a {text-decoration:underline;text-underline-offset:3px}
+.symptom-answer a {display:inline-flex;align-items:center;min-height:44px}
+.legal {padding-block:35px;border-top:1px solid #454343}.legal h2 {font-size:24px}.legal p {max-width:85ch}.contact-dock {display:none}
+@media(max-width:700px){.jobs,.contact-grid{grid-template-columns:1fr}.contact-dock{position:fixed;z-index:5;bottom:0;inset-inline:0;background:#171618;display:flex;padding:6px 12px calc(6px + env(safe-area-inset-bottom));border-top:1px solid #55494b}.contact-dock a{flex:1;text-align:center;padding:12px}.contact-dock a:last-child{background:#ac222a;border-radius:4px}.footer{padding-bottom:80px}}
+.contact-dock button, #demo-contact button {background:#242124;color:white;border:1px solid #62575b;border-radius:4px;min-height:44px;padding:8px 12px}
+.contact-dock button {flex:1}.contact-dock button:last-child {background:#ab232a}
+#demo-contact {max-width:min(90vw,400px);padding:26px;background:#211e20;color:white;border:1px solid #635558;border-radius:10px}
+#demo-contact::backdrop {background:#000a}#demo-contact p {line-height:1.5;margin:14px 0}#demo-contact form {display:inline-block;margin-right:15px}
+.area-map iframe {width:100%;height:300px;border:0;border-radius:8px}
+#reviews h2 {line-height:1.05;letter-spacing:-.025em}
+@media (max-width: 820px) { .bar nav { display: none; } }
+
+
 
 
