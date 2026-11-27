@@ -39,6 +39,9 @@ choices.forEach(choice => choice.addEventListener('click', () => {
 
 const serviceSelect = document.querySelector('#service');
 const selectedRate = document.querySelector('#selected-rate');
+for (const card of document.querySelectorAll('.repair-card')) {
+  serviceSelect.add(new Option(card.dataset.service, card.dataset.service));
+}
 function updateSelectedRate() {
   const card = Array.from(document.querySelectorAll('.repair-card')).find(item => item.dataset.service === serviceSelect.value);
   const rate = card?.querySelector('.service-rate')?.textContent;
